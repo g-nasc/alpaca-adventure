@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#game-area {
+    border: solid black 5px;
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: #bfedf5;
+    overflow: hidden;
+}
+
+#chao {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background-image: url('assets/chao_deserto.png');
+    background-size: 128px;
+    background-repeat: repeat-x;
+    image-rendering: pixelated;
+
+}
+
+
+#alpaca, #cacto{
+    position: absolute;
+    bottom: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+
+}
+
+#alpaca {
+    width: 128px;
+    height: 128px;
+    left: 50px;
+    background-image: url('assets/alpaca.gif');
+}
+
+#cacto {
+    width: 128px;
+    height: 128px;
+    left: 700px;
+    background-image: url('assets/cacto.png');
+}
+
+#hitbox-alpaca {
+    position: absolute;
+    width: 101px;
+    height: 40px;
+    left: 4px;
+    bottom: 0;
+    /*background-color: rgba(255, 0, 0, 0.3);*/
+    pointer-events: none;
+}
+#hitbox-cacto {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 34px;
+    bottom: 0;
+    /*background-color: rgba(255, 0, 0, 0.3);*/
+    pointer-events: none;
+}
