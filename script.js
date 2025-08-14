@@ -2,16 +2,14 @@ const chao = document.getElementById('chao');
 let posicaoChao = 0;
 let velocidade = 3;
 let jogoRodando = true;
-
-/*let tempo = 0;*/
+let tempo = 0;
 
 function moverChao(){
-    /* Usar depois...
     tempo++;
-    if (tempo % 300 === 0) {
-    velocidade += 0.125;
+    if (tempo % 800 === 0) {
+    velocidade += 0.35;
     }
-    */
+   
     if (!jogoRodando) return;
     posicaoChao -= velocidade;
     chao.style.backgroundPositionX = `${posicaoChao}px`
@@ -57,7 +55,6 @@ atualizarPulo();
 
 const cacto = document.getElementById('cacto');
 let posicaoCacto = 800;
-const velocidadeCacto = 3;
 const larguraTela = 800;
 const espacamento = 600;
 
@@ -65,8 +62,8 @@ const hitboxAlpaca = document.getElementById('hitbox-alpaca');
 const hitboxCacto = document.getElementById('hitbox-cacto');
 
 function moverCacto() {
-    posicaoCacto -= velocidadeCacto;
-    if (posicaoCacto < -32) {
+    posicaoCacto -= velocidade;
+    if (posicaoCacto < -200) {
         posicaoCacto = larguraTela + espacamento;
     }
 
@@ -91,4 +88,11 @@ function detectarColisao() {
     rectA.top < rectB.bottom &&
     rectA.bottom > rectB.top
   );
+}
+
+const reset = document.getElementById('reset')
+reset.addEventListener("click", reseta)
+
+function reseta() {
+    location.reload();
 }

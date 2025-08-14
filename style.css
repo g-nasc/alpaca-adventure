@@ -1,19 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #dbdbdb;
+    background-color: #cacaca;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #333;
+
 }
 
 
 #game-area {
     border: solid black 5px;
     position: relative;
-    width: 800px;
-    height: 400px;
+    width: 1168px;
+    height: 648px;
     background-color: #bfedf5;
     overflow: hidden;
 }
@@ -73,4 +77,18 @@ body {
     bottom: 0;
     /*background-color: rgba(255, 0, 0, 0.3);*/
     pointer-events: none;
+}
+
+#reset {
+    position: absolute;
+    bottom: 112px; /* distância do chão */
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: double;
+    border-radius: 4%;
+    background-color: rgb(167, 167, 167);
+    width: 166px;
+    height: 60px;
+    font-size: 30px;
+    font-family: 'Press Start 2P';
 }
