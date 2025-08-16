@@ -96,3 +96,32 @@ reset.addEventListener("click", reseta)
 function reseta() {
     location.reload();
 }
+
+
+const fundo = document.getElementById('fundo');
+let posicaoFundo = 0;
+
+function moverCenario() {
+    if (!jogoRodando) return;
+
+    posicaoFundo -= velocidade * 0.05;
+
+    fundo.style.backgroundPositionX = `${posicaoFundo}px`;
+
+    requestAnimationFrame(moverCenario);
+}
+moverCenario();
+
+const nuvens = document.getElementById('nuvens');
+let posicaoNuvens = 0;
+
+function moverNuvens() {
+    if (!jogoRodando) return;
+
+    posicaoNuvens -= velocidade * 0.0125;
+
+    nuvens.style.backgroundPositionX = `${posicaoNuvens}px`;
+
+    requestAnimationFrame(moverNuvens);
+}
+moverNuvens();
